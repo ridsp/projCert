@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Install git
+    apt:
+     name: git
+     state: present
+     update_cache: yes
+  - name: chromium-chromedriver
+    apt:
+     name: chromium-chromedriver
+     state: present
+     update_cache: yes
+  - name: chromium-browser
+    apt:
+     name: chromium-browser
+     state: present
+     update_cache: yes
